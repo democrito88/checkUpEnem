@@ -12,7 +12,7 @@ if($sql){
 desconecta($conn);
 
 echo "
-<form action=\"alterarArea.php\" method=\"POST\">
+<form action=\"alteraArea.php\" method=\"POST\">
     <label>Nome</label>
     <input type=\"text\" name=\"nome\" value=\"".$nome."\">
     <button class=\"btn btn-sucess\">Cadastrar</button>

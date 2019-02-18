@@ -1,5 +1,6 @@
 <?php
-session_start();
+include_once './conexao.php';
+
 function antiInjection($string){
     $lista = array("<script>",";","SELECT", "DROP", "DELETE", "ALTER", "SHOW", "UPDATE", "INSERT");
     $flag = false;
@@ -29,4 +30,5 @@ function sessao(){
     if(!isset($_SESSION['login'])){
         header("Location: index.php");
     }
+    session_start();
 }
