@@ -1,5 +1,5 @@
 <?php
-include_once './conexao.php';
+include_once 'conexao.php';
 
 function antiInjection($string){
     $lista = array("<script>",";","SELECT", "DROP", "DELETE", "ALTER", "SHOW", "UPDATE", "INSERT");
@@ -27,7 +27,7 @@ function antiInjection($string){
 }
 
 function sessao(){
-    if(!isset($_SESSION['login'])){
+    if(is_null(session_id())){
         header("Location: index.php");
     }
     session_start();

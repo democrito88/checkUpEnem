@@ -1,0 +1,70 @@
+/* 
+    Created on : 22/02/2019, 22:31:47
+    Author     : rodrigo
+    Verde: #13a89e
+    Roxo: #4d419a
+    Azul: #0f75bc
+*/
+
+.sessao-login{
+    width: 100%;
+    height: 100vh;
+    /*background: url(../Img/bg1.jpeg);*/;
+}
+
+.painel-verde{
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+    border-color: #13a89e;
+    max-width: 400px;
+    left: calc(50% - 168px);
+    top: calc(50% - 134px);
+}
+
+.panel-header, .panel-footer{
+    background-color: #13a89e;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    min-height: 30px;
+}
+
+.cabecalho{
+    background-color: #13a89e;
+    color: white;
+    padding: 5%;
+    width: 100%;
+    top: 0;
+}
+
+.cabecalho h1{text-align: center}
+
+.cabecalho h4{float: right;}
+
+.rodape{
+    background-color: #13a89e;
+    color: white;
+    padding: 20px 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+}
+
+.sessao-principal{
+    padding: 8%;
+}
+
+.sessao-principal div{
+    background-color: #0f75bc;
+    color: white;
+    margin: 15px;
+    padding: 15px;
+}

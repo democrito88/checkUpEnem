@@ -10,7 +10,7 @@ if(antiInjection($login) != false || antiInjection($senha) !=false){
 }
 
 $conn = conecta();
-$query = "SELECT id, nome FROM usuario WHERE login = '".$login."' AND senha = SHA1('".$senha."')";
+$query = "SELECT id, nome FROM usuarios WHERE login = '".$login."' AND senha = SHA1('".$senha."')";
 $sql = mysqli_query($conn, $query);
 desconecta($conn);
 if(is_null($sql) || is_bool($sql)){
@@ -19,7 +19,7 @@ if(is_null($sql) || is_bool($sql)){
     echo $sql != false? "sql: true<br/>" : "sql: false<br/>";
 }else{
     if(mysqli_num_rows($sql)<= 0){
-        header("Location: index.php");
+        header("Location: ../index.php");
     }else{
         while($resultado = mysqli_fetch_assoc($sql)){
             $nome = $resultado['nome'];
@@ -27,6 +27,7 @@ if(is_null($sql) || is_bool($sql)){
         }
         $_SESSION['nome'] = $nome;
         $_SESSION['id'] = $id;
-        header("Location: principal.php");
+        session_start();
+        header("Location: ../principal.php");
     }
 }
