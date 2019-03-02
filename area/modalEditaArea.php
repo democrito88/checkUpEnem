@@ -12,9 +12,10 @@ if($sql){
 desconecta($conn);
 
 echo "
-<form action=\"alteraArea.php\" method=\"POST\">
+<form action=\"area/alteraArea.php\" method=\"POST\">
+    <h4>Edite uma área</h4><br>
     <label>Nome</label>
-    <input type=\"text\" name=\"nome\" value=\"".$nome."\">
-    <button class=\"btn btn-sucess\">Cadastrar</button>
+    <input type=\"text\" name=\"nome\" value=\"".$nome."\"><br><br>
+    <button class=\"btn btn-sucess\">Editar</button>
 </form>
 ";

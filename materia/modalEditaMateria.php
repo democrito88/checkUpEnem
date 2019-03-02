@@ -14,11 +14,12 @@ if($sql){
 desconecta($conn);
 
 echo "
-<form action=\"alteraMAteria.php\" method=\"POST\">
+<form action=\"materia/alteraMateria.php\" method=\"POST\">
+    <h4>Edite uma matéria</h4><br>
     <label>Nome</label>
-    <input type=\"text\" name=\"nome\" value=\"".$nome."\">
-    <label>Area</label>
-    ".selectArea($id)."
-    <button class=\"btn btn-sucess\">Cadastrar</button>
+    <input type=\"text\" name=\"nome\" value=\"".$nome."\"><br>
+    <label>Área</label>
+    ".selectArea($id)."<br><br>
+    <button class=\"btn btn-sucess\">Editar</button>
 </form>
 ";

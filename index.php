@@ -17,7 +17,7 @@ and open the template in the editor.
     <body>
         <section class="sessao-login">
             <div class="panel painel-verde">
-                <div class="panel-header">
+                <div class="panel-header painel-verde-header">
                     <h3>Bem vindo(a) ao check-up ENEM!</h3>
                 </div>
                 <div class="panel-body">
@@ -29,7 +29,7 @@ and open the template in the editor.
                         <button type="submit" class="btn btn-success">Entrar</button>
                     </form>
                 </div>
-                <div class="panel-footer"></div>
+                <div class="panel-footer painel-verde-footer"></div>
             </div>
         </section>
     </body>

@@ -25,9 +25,10 @@ if(is_null($sql) || is_bool($sql)){
             $nome = $resultado['nome'];
             $id = $resultado['id'];
         }
+        session_start();
         $_SESSION['nome'] = $nome;
         $_SESSION['id'] = $id;
-        session_start();
+        //echo var_dump($_SESSION);
         header("Location: ../principal.php");
     }
 }

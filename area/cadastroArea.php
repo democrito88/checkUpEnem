@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     
     if(!antiInjection($_POST['nome'])){
         $nome = $_POST['nome'];
-        $query = "INSERT INTO `area` (`nome`) VALUES ".$nome;
+        $query = "INSERT INTO `area`(`nome`) VALUES('".$nome."')";
 
         $conn = conecta();
         $sql = mysqli_query($conn, $query);

@@ -1,5 +1,5 @@
 <?php
-include_once './conexao.php';
+include_once 'conexao.php';
 
 function selectArea($id = null){
     $conn = conecta();
@@ -7,12 +7,12 @@ function selectArea($id = null){
     $sql = mysqli_query($conn, $query);
     
     $resposta = "<select name=\"idArea\" required>";
-    if(!$sql){
+    if($sql){
         while($area = mysqli_fetch_assoc($sql)){
             $resposta .= "<option value=\"".$area['id']."\""
-                    . !is_null($id) && $id = $area['id']? "selected" : ""
+                    . (!is_null($id) && $id == $area['id']? "selected" : "")
                     . ">"
-                    .$area['nome']."</option>";
+                    .utf8_encode($area['nome'])."</option>";
         }
     }
     $resposta .= "</select>";

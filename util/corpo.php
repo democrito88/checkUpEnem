@@ -12,13 +12,15 @@ echo "
         <meta charset=\"UTF-8\">
         <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css\"/>
         <link rel=\"stylesheet\" href=\"css/style.css\"/>
+        <link rel=\"stylesheet\" href=\"../css/style.css\"/>
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js\"></script>
+        <script src=\"js/modais.js\"></script>
     </head>
     <body>
         <header class=\"cabecalho\">
-            <h1>Check-up do ENEM</h1>
-            <h4>Bem vinda, ".utf8_encode($_SESSION['nome'])." </h4>
+            <h1><p class=\"glyphicon glyphicon-check\"></p>&nbsp;Check-up do ENEM</h1>
+            <h4>Bem vinda, ".utf8_encode($_SESSION['nome'])." | <span onclick=\"window.location.replace('http://localhost/checkUpEnem/util/logout.php');\">Logout</span> </h4>
         </header>
         ";
 }
